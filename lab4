@@ -2,7 +2,7 @@ module vsevenseg(
     input [3:0] x,
     output [6:0] seg_L
     );
-    reg seg_L;
+    reg [6:0] seg_L;
     always@*
     begin 
     case(x)
