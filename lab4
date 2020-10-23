@@ -32,11 +32,11 @@ endmodule
 module vaddoflow(
     input [3:0] a,
     input [3:0] b,
-    output reg [6:0] seg_L,
+    output [6:0] seg_L,
     output oflow
     );
     wire [4:0] x;
-    assign x = a+ b;
-    vsevenseg m1(.x(x[3:0]),.seg_L(seg_L[6:0]));
+    assign x = a + b;
+    vsevenseg (.x(x[3:0]),.seg_L(seg_L));
     assign oflow = x[4];
 endmodule
